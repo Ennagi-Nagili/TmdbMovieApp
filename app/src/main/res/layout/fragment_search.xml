@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.SearchFragment"
+    android:background="@color/primary">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/search_back"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="8dp"
+        android:hint="@string/type_title_categories_years_etc"
+        android:inputType="text"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColorHint="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/search"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:visibility="visible">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/categories"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/todayText"
+            app:layout_constraintTop_toBottomOf="@id/categories"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/today"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="25dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/poster"
+            android:background="@drawable/spiderman"
+            app:layout_constraintTop_toBottomOf="@id/todayText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="24dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rate_back"
+            app:layout_constraintTop_toBottomOf="@id/todayText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="32dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/star"
+            android:src="@drawable/star"
+            app:layout_constraintTop_toBottomOf="@id/todayText"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rate"
+            android:text="4.5"
+            android:textSize="12sp"
+            android:textColor="@color/orange"
+            app:layout_constraintTop_toBottomOf="@id/todayText"
+            app:layout_constraintLeft_toRightOf="@id/star"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/premium"
+            android:background="@drawable/premium_back"
+            app:layout_constraintTop_toBottomOf="@id/todayText"
+            app:layout_constraintLeft_toRightOf="@id/poster"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/premium"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:text="@string/spider_man_no_way"
+            app:layout_constraintTop_toBottomOf="@id/premium"
+            app:layout_constraintLeft_toRightOf="@id/poster"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintLeft_toRightOf="@id/poster"
+            android:text="2021"
+            android:textColor="@color/grey"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="24dp"
+            app:drawableStartCompat="@drawable/calendar"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            app:layout_constraintTop_toBottomOf="@id/year"
+            app:layout_constraintLeft_toRightOf="@id/poster"
+            android:text="@string/_148_minutes"
+            android:textColor="@color/grey"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="24dp"
+            app:drawableStartCompat="@drawable/clock"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pg_back"
+            app:layout_constraintTop_toBottomOf="@id/year"
+            app:layout_constraintLeft_toRightOf="@id/time"
+            android:layout_marginTop="12dp"
+            android:text="@string/pg_13"
+            android:textColor="@color/prime_blue"
+            android:textSize="12sp"
+            android:paddingHorizontal="4dp"
+            android:paddingVertical="4dp"
+            android:layout_marginStart="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/film"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintLeft_toRightOf="@id/poster"
+            android:text="@string/action"
+            android:textColor="@color/grey"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="24dp"
+            app:drawableStartCompat="@drawable/film"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/divide"
+            app:layout_constraintTop_toBottomOf="@id/time"
+            app:layout_constraintLeft_toRightOf="@id/film"
+            android:text="@string/movie"
+            android:textColor="@color/white"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="8dp"
+            app:drawableStartCompat="@drawable/divider"
+            android:drawablePadding="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recommend"
+            android:text="@string/recommend_for_you"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="95dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/see_all"
+            android:text="@string/see_all"
+            android:textSize="14sp"
+            android:textColor="@color/prime_blue"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="97dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recommends"
+            app:layout_constraintTop_toBottomOf="@id/recommend"
+            android:layout_marginTop="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/actor"
+            android:text="@string/actors"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/actors"
+            app:layout_constraintTop_toBottomOf="@id/actor"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/related"
+            android:text="@string/movie_related"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/actors"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/see_all_2"
+            android:text="@string/see_all"
+            android:textColor="@color/prime_blue"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/actors"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/related"
+            android:layout_marginTop="16dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

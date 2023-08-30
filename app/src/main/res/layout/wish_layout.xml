@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/download_back"
+    android:layout_marginHorizontal="24dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/image"
+        android:src="@drawable/spider_trio"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/genre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        android:text="@string/action"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/genre"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        android:text="@string/spider_man_no_way_home"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginEnd="12dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/movie"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        android:text="@string/movie"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12.5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.5"
+        android:textColor="@color/orange"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintLeft_toRightOf="@id/movie"
+        android:layout_marginTop="12.5dp"
+        android:layout_marginStart="8dp"
+        app:drawableStartCompat="@drawable/star"
+        android:drawablePadding="4dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/like"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

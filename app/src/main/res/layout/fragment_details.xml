@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.DetailsFragment"
+    android:background="@color/primary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/big_poster"
+            android:background="@drawable/poster_big"
+            app:layout_constraintTop_toTopOf="parent"
+            android:alpha="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back"
+            android:background="@color/primary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="54dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/spider_man_no_way"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="58dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/like"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="28dp"
+            android:background="@color/primary"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/poster"
+            android:src="@drawable/mini_poster"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/spider2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="2021"
+            android:textColor="@color/grey"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="63dp"
+            app:drawableStartCompat="@drawable/calendar"
+            android:drawablePadding="4dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider1"
+            android:background="@drawable/divider"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintLeft_toRightOf="@id/year"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintLeft_toRightOf="@id/divider1"
+            android:text="@string/_148_minutes"
+            android:textColor="@color/grey"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="12dp"
+            app:drawableStartCompat="@drawable/clock"
+            android:drawablePadding="4dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/divider2"
+            android:background="@drawable/divider"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintLeft_toRightOf="@id/time"
+            android:layout_marginTop="26dp"
+            android:layout_marginStart="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/film"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            app:layout_constraintLeft_toRightOf="@id/divider2"
+            android:text="@string/action"
+            android:textColor="@color/grey"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="12dp"
+            app:drawableStartCompat="@drawable/film"
+            android:drawablePadding="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rate"
+            android:background="@drawable/rate_back"
+            app:layout_constraintTop_toBottomOf="@id/year"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="16dp"
+            app:drawableStartCompat="@drawable/star"
+            android:text="4.5"
+            android:textColor="@color/orange"
+            android:textSize="12sp"
+            android:paddingHorizontal="8dp"
+            android:drawablePadding="4dp"
+            android:paddingVertical="8dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/play"
+            android:text="@string/play"
+            android:background="@drawable/play_back"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/rate"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="24dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/download"
+            android:src="@drawable/download_btn"
+            app:layout_constraintTop_toBottomOf="@id/rate"
+            app:layout_constraintLeft_toRightOf="@id/play"
+            android:background="@color/primary"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/share"
+            android:src="@drawable/share_btn"
+            app:layout_constraintTop_toBottomOf="@id/rate"
+            app:layout_constraintLeft_toRightOf="@id/download"
+            android:background="@color/primary"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/story_line"
+            android:text="@string/story_line"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/play"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/story"
+            android:text="@string/story"
+            app:layout_constraintTop_toBottomOf="@id/story_line"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cast_txt"
+            android:text="@string/cast_and_crew"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/story"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cast"
+            app:layout_constraintTop_toBottomOf="@id/cast_txt"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
